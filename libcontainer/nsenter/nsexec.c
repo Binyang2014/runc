@@ -595,8 +595,9 @@ void nsexec(void)
 	 * to ensure that containers won't be able to access the host binary
 	 * through /proc/self/exe. See CVE-2019-5736.
 	 */
-	if (ensure_cloned_binary() < 0)
-		bail("could not ensure we are a cloned binary");
+    // TODO: this is for debug
+	// if (ensure_cloned_binary() < 0)
+	// 	bail("could not ensure we are a cloned binary");
 
 	write_log(DEBUG, "nsexec started");
 
